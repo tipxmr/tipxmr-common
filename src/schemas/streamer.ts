@@ -1,12 +1,12 @@
 import * as z from 'zod';
 
 const AnimationSettings = z.object({
-    color: z.string()
+  color: z.string(),
 });
 
 export const Streamer = z.object({
-    name: z.string(),
-    animationSettings: AnimationSettings.optional()
+  name: z.string(),
+  animationSettings: AnimationSettings.optional(),
 });
 
 export type Streamer = z.infer<typeof Streamer>;
