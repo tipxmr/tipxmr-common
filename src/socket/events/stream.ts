@@ -1,7 +1,7 @@
-import { Donation } from '../../models/donation';
-import { Donor } from '../../models/donor';
-import { Streamer } from '../../models/streamer';
-import { StreamingStatus } from '../../models/streaming-status';
+import { Donation } from '../../schema/donation';
+import { Donor } from '../../schema/donor';
+import { Streamer } from '../../schema/streamer';
+import { StreamingStatus } from '../../schema/streaming-status';
 
 export interface StreamerClientEvents {
   login: (_id: string, username: string) => void;

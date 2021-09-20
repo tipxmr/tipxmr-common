@@ -1,5 +1,5 @@
-import { Donor } from '../../models/donor';
-import { Streamer } from '../../models/streamer';
+import { Donor } from '../../schema/donor';
+import { Streamer } from '../../schema/streamer';
 
 export interface DonatorClientEvents {
   getStreamer: (username: string) => void;
