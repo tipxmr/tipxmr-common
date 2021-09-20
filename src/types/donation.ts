@@ -2,7 +2,7 @@ import * as z from 'zod';
 
 export const Donation = z.object({
   id: z.string(),
-  amount: z.number(),
+  amount: z.bigint(),
   message: z.string(),
   displayTimeSeconds: z.number(),
   subaddress: z.string(),
