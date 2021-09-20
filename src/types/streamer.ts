@@ -4,15 +4,46 @@ const AnimationSettings = z.object({
   id: z.string(),
 });
 
+const Stream = z.object({
+  url: z.string(),
+  platform: z.string(),
+  language: z.string(),
+  description: z.string(),
+  category: z.string(),
+})
+
+type Stream = z.infer<typeof Stream>
+
+const WalletSettings = z.object({
+  restoreHeight: z.number(),
+})
+
+type WalletSettings = z.infer<typeof WalletSettings>
+
+const DonationSettings = z.object({
+  secondPrice: z.number(),
+  charPrice: z.number(),
+  charLimit: z.number(),
+  minAmount: z.number(),
+  gifsMinAmount: z.number(),
+  goalProgress: z.number(),
+  goal: z.number(),
+  goalReached: z.boolean(),
+})
+
+type DonationSettings = z.infer<typeof DonationSettings>
+
 export const Streamer = z.object({
   id: z.string(),
-  seed_hash: z.string(),
-  user_name: z.string(),
-  streamer_socket_id: z.string(),
-  animation_settings: AnimationSettings.optional(),
-  display_name: z.string(),
-  is_online: z.boolean(),
-  restore_height: z.number(),
+  seedHash: z.string(),
+  userName: z.string(),
+  streamerSocketId: z.string(),
+  displayName: z.string(),
+  isOnline: z.boolean(),
+  animationSettings: AnimationSettings.optional(),
+  donationSettings: DonationSettings.optional(),
+  stream: Stream.optional(),
+  wallet: WalletSettings.optional()
 });
 
 export type Streamer = z.infer<typeof Streamer>;
@@ -27,22 +58,11 @@ export default Streamer;
 //     name: "alexanarcho"
 // } as Streamer;
 
-// export interface Streamer {
-//   displayName: string;
-//   userName: string;
-//   isOnline: boolean;
-//   _id: string;
-//   secondPrice: number;
-//   charPrice: number;
-//   charLimit: number;
-//   minAmount: number;
-//   gifsMinAmount: number;
-//   goalProgress: number;
-//   goal: number;
-//   goalReached: boolean;
-//   streamUrl: string;
-//   streamPlatform: string;
-//   streamLanguage: string;
-//   streamDescription: string;
-//   streamCategory: string;
-// }
+  // settings: z.object({
+  //   price_per_second_playtime: z.number(),
+  //   price_per_character_in_message: z.number(),
+  //   limit_of_characters_in_message: z.number(),
+  //   minimum_tip_amount: z.number(),
+  //   minimum_tip_amount_for_gifs: z.number(),
+  //   minimum_amount_for_gifs: z.number(),
+  // })
