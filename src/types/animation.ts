@@ -2,7 +2,7 @@ import * as z from "zod"
 
 
 export const Animation = z.object({
-  id: z.string(),
+  id: z.string(), // TODO write regex
   streamer: z.string(),
   size: z.number(),
   color: z.string(),

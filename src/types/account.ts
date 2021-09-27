@@ -1,9 +1,10 @@
 import * as z from 'zod';
+import Streamer from './streamer'
 
 export const Account = z.object({
-  streamer: z.string(),
+  streamer: Streamer, // TODO create separate streamer ID thingy
   timestamp: z.date(),
-  status: z.string(),
+  status: z.enum(['active', 'closed']),
 });
 
 export type Account = z.infer<typeof Account>;

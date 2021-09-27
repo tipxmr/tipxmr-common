@@ -1,18 +1,17 @@
 import * as z from 'zod';
-import Streamer from './streamer'
+import Category from './category'
+import Language from './language'
+import Platform from './platform'
 
-
-// --- Streamer
 export const Stream = z.object({
-  streamer: Streamer,
+  streamer: z.string().uuid(),
   url: z.string().url(),
-  platform: z.enum(['twitch', 'youtube', 'chaturbate', 'selfHosted']),
-  language: z.enum(['english', 'german', '...']),
-  category: z.string(),
+  platform: Platform,
+  language: Language,
+  category: Category,
   description: z.string(),
   visibility: z.enum(['public', 'private']),
 });
 
 export type Stream = z.infer<typeof Stream>;
-
 export default Stream;
