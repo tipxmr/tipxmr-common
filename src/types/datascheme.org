@@ -1,4 +1,4 @@
-* Streamer
+* ✅ Streamer
 - id <-- = truncatedHashedSeed to identify the target of a donation unique
 - name <-- persistent, max ~20 zeichen, keine emojis, all lower /a-z0-9-d unique
 - alias <-- mit 😀 Emoji, max ~24 zeichen unique
@@ -29,12 +29,12 @@
 - Learning
 - Pron
 
-* Account
+* ✅ Account
 - streamer
 - creationDate <-- timestamp
 - status <-- closed; active
 
-* Subscription/Invoice
+* ✅ Subscription/Invoice
 - id
 - streamer
 - startDate <-- timestamp
@@ -43,7 +43,7 @@
 - paidStatus <-- paid; unpaid; cancelled
 - subaddress <-- of the platform operator
 
-* Donation
+* ✅ Donation
 - id
 - streamer
 - amount <-- double precision float?
@@ -55,7 +55,7 @@
 - donor <-- santized string, name of donor
 - timestamp
 
-* DonationSettings
+* ✅ DonationSettings
 - streamer
 - secondPrice
 - charPrice
