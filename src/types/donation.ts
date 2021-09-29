@@ -6,12 +6,12 @@ export const Donation = z.object({
   timestamp: z.date(),
   streamer: StreamerId,
   donor: z.string(),
-  amount: z.bigint(),
+  amount: z.number(),
   subaddress: z.string(),
   confirmations: z.number(),
   message: z.string(),
   displayTimeSeconds: z.number(),
-  giphyUrl: z.string(),
+  giphyUrl: z.string().url(),
 });
 
 export type Donation = z.infer<typeof Donation>;

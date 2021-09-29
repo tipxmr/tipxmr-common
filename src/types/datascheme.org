@@ -1,47 +1,35 @@
-* ✅ Streamer
-- id <-- = truncatedHashedSeed to identify the target of a donation unique
-- name <-- persistent, max ~20 zeichen, keine emojis, all lower /a-z0-9-d unique
-- alias <-- mit 😀 Emoji, max ~24 zeichen unique
-- socket <-- dynamic on use, tells if online
-
-* Animation
-- id
-- streamer
-- size
-- color
-
-* Wallet
-- streamer
-- restoreHeight
-- lastSyncHeight
-
-* Stream
-- streamer
-- url
-- platform <-- Enum
-- language <-- Enum
-- category <-- 1-zu-N (max 2-3)
-- description <-- sanitized string field
-- visibility <-- public; private
-
-* Category
-- Gaming
-- Learning
-- Pron
-
 * ✅ Account
 - streamer
 - creationDate <-- timestamp
 - status <-- closed; active
 
-* ✅ Subscription/Invoice
+* ✅ Animation
 - id
 - streamer
-- startDate <-- timestamp
-- endDate <-- timestamp
-- planType <-- basic; premium
-- paidStatus <-- paid; unpaid; cancelled
-- subaddress <-- of the platform operator
+- size
+- color
+
+* ✅ Category
+- Gaming
+- Learning
+- Pron
+* Language
+- Dutch
+- English
+- Esperanto
+- French
+- German
+- Italian
+- Japanese
+- Portuguese
+- Russian
+- Spanish
+
+* Platform
+- Twitch
+- YouTube
+- DLive
+- SelfHosted
 
 * ✅ Donation
 - id
@@ -65,3 +53,31 @@
 - goal
 - goalProgress
 - goalReached
+* ✅ Invoice
+- id
+- streamer
+- startDate <-- timestamp
+- endDate <-- timestamp
+- planType <-- basic; premium
+- paidStatus <-- paid; unpaid; cancelled
+- subaddress <-- of the platform operator
+
+* Stream
+- streamer
+- url
+- platform <-- Enum
+- language <-- Enum
+- category <-- 1-zu-N (max 2-3)
+- description <-- sanitized string field
+- visibility <-- public; private
+
+* ✅ Streamer
+- id <-- = truncatedHashedSeed to identify the target of a donation unique
+- name <-- persistent, max ~20 zeichen, keine emojis, all lower /a-z0-9-d unique
+- alias <-- mit 😀 Emoji, max ~24 zeichen unique
+- socket <-- dynamic on use, tells if online
+
+* Wallet
+- streamer
+- restoreHeight
+- lastSyncHeight

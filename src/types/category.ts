@@ -1,7 +1,7 @@
 import * as z from 'zod';
 
 export const Category = z.object({
-  id: z.string(), // ⚠️ tbd
+  id: z.string(),
   title: z.string(),
 });
 

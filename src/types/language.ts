@@ -1,7 +1,7 @@
 import * as z from 'zod';
 
 export const Language = z.object({
-  id: z.string(), // ⚠️ tbd
+  id: z.string(),
   title: z.string()
 });
 

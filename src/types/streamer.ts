@@ -15,13 +15,4 @@ export const Streamer = z.object({
 });
 
 export type Streamer = z.infer<typeof Streamer>;
-
 export default Streamer;
-
-// const alex = Streamer.parse({
-//     name: "alexanarcho"
-// });
-
-// const alex = {
-//     name: "alexanarcho"
-// } as Streamer;
