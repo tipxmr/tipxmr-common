@@ -1,8 +1,9 @@
 import * as z from 'zod';
+import StreamerId from './streamerId'
 
 // --- Streamer
 export const Streamer = z.object({
-  id: z.string(),
+  id: StreamerId,
   name: z.string(),
   socket: z.string(),
   alias: z

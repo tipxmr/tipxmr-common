@@ -1,7 +1,8 @@
 import * as z from 'zod';
+import StreamerId from './streamerId'
 
 export const DonationSettings = z.object({
-  streamer: z.string(),
+  streamer: StreamerId,
   secondPrice: z.number(),
   charPrice: z.number(),
   charLimit: z.number(),

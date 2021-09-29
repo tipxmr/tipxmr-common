@@ -1,8 +1,8 @@
 import * as z from 'zod';
-import Streamer from './streamer'
+import StreamerId from './streamerId'
 
 export const Account = z.object({
-  streamer: Streamer, // TODO create separate streamer ID thingy
+  streamer: StreamerId, // TODO create separate streamer ID thingy
   timestamp: z.date(),
   status: z.enum(['active', 'closed']),
 });

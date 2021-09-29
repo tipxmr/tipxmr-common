@@ -2,9 +2,10 @@ import * as z from 'zod';
 import Category from './category'
 import Language from './language'
 import Platform from './platform'
+import StreamerId from './streamerId'
 
 export const Stream = z.object({
-  streamer: z.string().uuid(),
+  streamer: StreamerId,
   url: z.string().url(),
   platform: Platform,
   language: Language,

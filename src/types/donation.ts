@@ -1,9 +1,10 @@
 import * as z from 'zod';
+import StreamerId from './streamerId'
 
 export const Donation = z.object({
   id: z.string(),
   timestamp: z.date(),
-  streamer: z.string(),
+  streamer: StreamerId,
   donor: z.string(),
   amount: z.bigint(),
   subaddress: z.string(),
