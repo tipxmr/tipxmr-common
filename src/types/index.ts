@@ -9,4 +9,5 @@ export * from './platform';
 export * from './result';
 export * from './stream';
 export * from './streamer';
+export * from './streamerId';
 export * from './wallet';
